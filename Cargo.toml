@@ -1,0 +1,22 @@
+[package]
+name = "ledger"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0.69"}
+itertools = { version = "0.10.5"}
+log  = {version = "0.4.17"}
+env_logger =  { version="0.10.0"}
+thiserror  = { version="1.0.38" }
+clap = { version="4.1.6", features=["derive", "env"]}
+
+[lib]
+name = "ledger"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ledger"
+path = "src/bin.rs"
